@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var str = "Hello"
+
+        var chars = [...str]; // Spread Operator
+        console.log(chars);
+
+        var nome = "Samuel";
+        var sobrenome = "Camargo";
+        var idade = 17;
+
+        console.log("Meu nome é " + nome + ' ' + sobrenome + ". Eu tenho " + idade + " anos.");
+
+        console.log('Meu nome é ' + nome + " " + sobrenome + '. Eu tenho ' + idade + ' anos.');
+
+        console.log(`Meu nome é ${nome} ${sobrenome}. Eu tenho ${idade} anos.`); // Uso de crase!
+
+        var texto = "Mergulhando em tecnologia.";
+        console.log(texto.substr(0,11));
+
+        texto = "Unicamp";
+        console.log("Tamanho: " + texto.length);
+        console.log(texto.toUpperCase());
+        console.log(texto.toLowerCase());
+
+        console.log('---- chatAt() ----');
+        console.log(texto.charAt(3));
+
+        console.log("---- Split() ----");
+        texto = "23/10/2021";
+        var aux = texto.split("/");
+        console.log(aux);
+
+        if(aux[1] == '10') {
+            var mes = 'Outubro';
+        }
+
+        console.log('Limeira, ' + aux[0] + ' de ' + mes + ' de ' + aux[2]);
+
+        var texto2 = 'Cotil Unicamp Limeira';
+
+        console.log('---- indexOf ----')
+
+        // startsWith e endsWith
+
+        var nomeTest = 'Samuka';
+        console.log(nomeTeste.startsWith('Sa'));
+        console.log(nomeTeste.endsWith('ke'));
+
+        // replace - substitui parte de uma string por outras
+        var nome = "André";
+        var comunicado = "Olá sr. nomeusuario, informamos que a partir da presente data o senhor tem 50% de desconto em nossa loja.";
+        console.log(comunicado.replace("nomeusuario", nome));
+
+        // trim = remove espaçoa em branco no início ou fim de uma string
+        var login = "     andre@emailteste.com           ";
+        let loginSemEspaco = login.trim();
+        console.log(loginSemEspaco);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

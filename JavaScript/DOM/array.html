@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = new Array(10);
+
+        a[0] = "xyz"
+        a[1] = true;
+        a[2] = 1.500;
+        console.log(a);
+
+        //declarando um Array na forma literal
+        var nomes = ['Felipe', 'Samuka', 'Davie']
+        console.log("--------Array Inicial-----------")
+        console.log(nomes)
+        console.log(nomes.length) //retorna o tamanho da array
+
+        //add um elemento ao final de um array - push
+        nomes.push('Neto')
+        console.log("------------------")
+        console.log(nomes)
+        console.log(nomes.length)
+
+        // 12 e false não são strings, mas mesmo assim são inseríveis.
+        nomes.push(12);
+        nomes.push(false);
+
+        // Adiciona um elemento no início da array
+        nomes.unshift("Ana");
+        console.log(nomes);
+
+        // deleta apenas o valor da posição, ma a posição é mantida.
+        delete nomes[1];
+        console.log(nomes);
+
+        // remover e retornar o ultimo elemento de um array - pop
+        var nome = nomes.pop();
+        console.log("Elemento removido: " + nome);
+        console.log(nomes)
+
+        // remover e retornar o primeiro elemento de um array - pop
+        var nome = nomes.shift();
+        console.log("Elemento removido: " + nome);
+        console.log(nomes)
+
+        // splice - especifica o índice inicial e a quantidade de elementos a serem removidos incluindo o elemento do índice inicial.
+        var test = [1, 2, 3, 4];
+        test.splice(2, 1);
+        console.log(text);
+
+        console.log("------------------")
+        console.log(typeof nomes);
+
+        //criando array de array 
+        var multidimencional = [[1, 2, 3], [4, 5, 6]];
+        console.log('---- Array de array ----');
+        console.log(multidimencional);
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
