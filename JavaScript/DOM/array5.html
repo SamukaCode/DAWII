@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const aulas = [10,25,30];
+
+        const total1 = aulas.reduce(
+            (acumulador, atual)=>{
+                return acumulador + atual;
+        });
+        
+        console.log(total1); //65
+
+        const total2 = aulas.reduce((acc,cur)=> acc+cur,100);
+        console.log(total2); //165
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let frutas = ['Banana', 'Pêra', 'Uva', 'Maçã'];
+        const buscaUva = frutas.findIndex((fruta) => {
+            return fruta === 'Uva';
+        });
+        console.log("Posição Uva:" + buscaUva);
+
+        let numeros = [6, 43, 22, 88, 10, 29];
+        let buscaMaior45 = numeros.find(x => x > 45);
+        console.log(buscaMaior45);
+
+        let nomesTeste = ['Matheus', 'Lucas', 'João'];
+        console.log(nomesTeste.includes('Simone'));
+
+        if (nomesTeste.includes('Simone')) {
+            console.log('Simone está na lista!');
+        } else {
+            console.log('Simone não está na lista.');
+        }
+
+        console.log(nomesTeste.some(nome => nome === 'Lucas'));
+
+        numeros = [6, 43, 22, 2, 101, 29];
+        const maiorQue3 = numeros.every(x => console.log(x > 3));
+        console.log(maiorQue3);
+
+        numeros = [6, 43, 22, 88, 101, 29]
+        buscaMaior45 = numeros.filter(x => x > 45);
+        console.log(buscaMaior45) //[88,101]
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
