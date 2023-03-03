@@ -14,10 +14,10 @@ let universidade = 'Unicamp'
 
 if(nome != null) {
     let colegio = 'Cotil';
-    console.log(Unicamp + '/' + colegio);
+    console.log(universidade + '/' + colegio);
 }
 
-console.log(colegio) /* Não é acessível fora do if*/
+//console.log(colegio) /* Não é acessível fora do if*/
 
 // const
 
