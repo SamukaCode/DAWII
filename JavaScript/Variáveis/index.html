@@ -48,12 +48,12 @@
             configByTime();
 
             function configByTime() {
-                if(hoje.getHours() < 18) {
+                if(hoje.getHours() > 18) {
                     document.getElementById("body").style.backgroundImage = "url('https://gifs.eco.br/wp-content/uploads/2021/06/mais-de-60-gifs-de-bom-dia-para-whatsapp-e-facebook-45.gif')";
                     document.getElementById("body").style.color = "red";
                     document.getElementById("saudacao").textContent = "Bom dia!";
                 } else {
-                    document.getElementById("body").style.backgroundColor = "gray";
+                    document.getElementById("body").style.backgroundImage = "url('https://media.tenor.com/k1qPg8hPeVUAAAAC/boa-noite-good-night.gif')";
                     document.getElementById("body").style.color = "white";
                     document.getElementById("saudacao").textContent = "Boa noite!";
                 }

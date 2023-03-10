@@ -1,5 +1,4 @@
 <?php
-if ($SERVER["REQUEST_METHOD"] === 'GET') {
     $msgN1 = "";
     $msgN2 = "";
 }

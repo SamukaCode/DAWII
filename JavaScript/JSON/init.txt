@@ -1,0 +1,7 @@
+JavaScript Object Notation
+
+Formato texto e independente de linguagem.
+
+Para troca de dados.
+
+Leve e simples de ler. Melhor que XML.
