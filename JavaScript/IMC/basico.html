@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+        function verificarIMC () {
+            var peso = document.getElementById("peso").value;
+            var altura = document.getElementById("altura").value;
+
+            if((peso == "") || (altura == "")) {
+                //alert("Peso e altura são obrigatórios");
+                Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Peso e altura são obrigatórios' })
+            } else {
+                imc = 0;
+                imc = peso/(altura * altura);
+
+                if (imc <=18.5) {
+                    //alert("Abaixo do peso. IMC = " + imc) ;
+                    Swal.fire("Abaixo do peso. IMC = " + imc)
+                } else if ((imc >= 18.6) && (imc <= 24.9)) {
+                    //alert("Peso idel. Parabéns. IMC = " + imc);
+                    Swal.fire({
+                    icon: 'success',
+                    title: "Peso idel. Parabéns. IMC = " + imc,
+                    showConfirmButton: false
+                })                  
+                } else if ((imc >= 25.0) && (imc <= 29.9)) {
+                    //alert("Levemente acima do peso. IMC = " + imc);
+                    Swal.fire("Levemente acima do peso. IMC = " + imc)
+                } else if ((imc >= 30.0) && (imc <= 34.9)) {
+                    //alert("Obesidade grau I. IMC = " + imc);
+                    Swal.fire("Obesidade grau I. IMC = " + imc)                    
+                } else if ((imc >= 35.0) && (imc <= 39.0)) {
+                    //alert("Obesidade grau II (Severa). IMC = " + imc);
+                    Swal.fire("Obesidade grau II (Severa). IMC = " + imc) 
+                } else {
+                    //alert("Obesidade grau III (Mórbida). IMC = " + imc);
+                    Swal.fire("Obesidade grau III (Mórbida). IMC = " + imc)
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    Introdução ao JavaScript - Peso ideal
+
+    <br><br>
+
+    Peso:<br>
+    <input type="text" id="peso" name="peso">
+    <br><br>
+    Altura:<br>
+    <input type="text" id="altura" name="altura">
+    <br><br>
+    <input type="button" value="verificar" onclick="verificarIMC()">
+</body>
+</html>
