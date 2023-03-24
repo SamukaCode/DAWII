@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Troca Imagem</title>
+    <script>
+        function destacarTabela() {
+            var tabela = document.getElementById("tabelaAlunos");
+            tabela.style.backgroundColor = "yellow";
+            tabela.style.fontSize = "30px";
+            tabela.style.transform = "rotate(3600deg)";
+            tabela.style.transitionDuration = "10s";
+            size = + 100;
+        }
+
+        function voltaTabela() {
+            var tabela = document.getElementById("tabelaAlunos");
+            tabela.style.backgroundColor = "white";
+            tabela.style.fontSize = "100px";
+            tabela.style.transform = "rotate(0deg)";
+            tabela.style.transitionDuration = "10s";
+        }
+    </script>
+</head>
+
+<body>
+    <img src="https://multiversomais.com/wp-content/uploads/2020/03/sova-valorant.jpg" width="700px" alt=""
+        onmouseover="this.src = 'https:/' + '/images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt8e68c6e841ded930/6181a5e29b08490cdd119059/VALORANT_Ep3_A3_Social_Updates_ChamberContent_Stack_Thumbnail_CHAMBER.jpg';"
+        onmouseout="this.src = 'https:/' + '/multiversomais.com/wp-content/uploads/2020/03/sova-valorant.jpg';">
+
+    <table border="1px" id="tabelaAlunos" onmouseover="destacarTabela();" onmouseout="voltaTabela()">
+        <tr>
+            <th>RA</th>
+            <th>Nome</th>
+        </tr>
+        <tr>
+            <td>1234</td>
+            <td>Simone</td>
+        </tr>
+        <tr>
+            <td>5678</td>
+            <td>Elaine</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+        function verificarIMC() {
+
+            var bk = "", color = "", msg = "";
+            var peso = document.getElementById("peso").value;
+            var altura = document.getElementById("altura").value;
+
+            if (peso.trim() == "") {
+                document.getElementById("msgPeso").textContent = "Informe o peso";
+                document.getElementById("msgPeso").style.color = "red";
+                document.getElementById("msgPeso").style.fontWeight = "bold";
+                exit();
+            } else {
+                document.getElementById("msgPeso").textContent = "";
+            }
+
+            if (altura.trim() == "") {
+                document.getElementById("msgAltura").textContent = "Informe a altura";
+                document.getElementById("msgAltura").style.color = "red";
+                document.getElementById("msgAltura").style.fontWeight = "bold";
+                exit();
+            } else {
+                document.getElementById("msgAltura").textContent = "";
+            }
+
+            var imc = 0;
+            imc = peso / (altura * altura);
+
+            if (imc <= 18.5) {
+                msg = "Abaixo do peso. IMC = " + imc;
+                color = "yellow";
+                bk = "black";
+            } else if ((imc >= 18.6) && (imc <= 24.9)) {
+                //alert("Peso idel. Parabéns. IMC = " + imc);
+                msg = "Peso ideal. Parabéns. IMC = " + imc;
+                color = "darkgreen";
+            } else if ((imc >= 25.0) && (imc <= 29.9)) {
+                //alert("Levemente acima do peso. IMC = " + imc);
+                msg = "Levemente acima do peso. IMC = " + imc;
+                color = "darkorange";
+            } else if ((imc >= 30.0) && (imc <= 34.9)) {
+                //alert("Obesidade grau I. IMC = " + imc);
+                msg = "Obesidade grau I. IMC = " + imc;
+                color = "darkred";
+            } else if ((imc >= 35.0) && (imc <= 39.0)) {
+                //alert("Obesidade grau II (Severa). IMC = " + imc);
+                msg = "Obesidade grau II (Severa). IMC = " + imc;
+                color = "red";
+                bk = "yellow";
+            } else {
+                //alert("Obesidade grau III (Mórbida). IMC = " + imc);
+                msg = "Obesidade grau III (Mórbida). IMC = " + imc;
+                color = "white";
+                bk = "red";
+            }
+
+            document.getElementById("msg").innerHTML = msg + "<br>";
+            document.getElementById("msg").style.color = color;
+            document.getElementById("msg").style.backgroundColor = bk;
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+        * {
+            font-family: 'Alkatra', cursive;
+            font-size: 22px;
+        }
+
+        h1 {
+            font-size: 28px !important;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h1>Introdução ao JavaScript - Peso ideal</h1>
+
+            Peso:<br>
+            <input type="text" id="peso" name="peso"><span id="msgPeso"></span>
+            <br><br>
+            Altura:<br>
+            <input type="text" id="altura" name="altura"><span id="msgAltura"></span>
+            <br><br>
+            <input type="button" value="verificar" onclick="verificarIMC()">
+        </form>
+        <br>
+        <span id="msg"></span>
+    </div>
+
+</body>
+
+</html>

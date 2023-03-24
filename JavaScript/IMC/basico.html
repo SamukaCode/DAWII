@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,39 +8,40 @@
     <title>IMC</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript">
-        function verificarIMC () {
+        function verificarIMC() {
             var peso = document.getElementById("peso").value;
             var altura = document.getElementById("altura").value;
 
-            if((peso == "") || (altura == "")) {
+            if ((peso == "") || (altura == "")) {
                 //alert("Peso e altura são obrigatórios");
                 Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Peso e altura são obrigatórios' })
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Peso e altura são obrigatórios'
+                })
             } else {
                 imc = 0;
-                imc = peso/(altura * altura);
+                imc = peso / (altura * altura);
 
-                if (imc <=18.5) {
+                if (imc <= 18.5) {
                     //alert("Abaixo do peso. IMC = " + imc) ;
                     Swal.fire("Abaixo do peso. IMC = " + imc)
                 } else if ((imc >= 18.6) && (imc <= 24.9)) {
                     //alert("Peso idel. Parabéns. IMC = " + imc);
                     Swal.fire({
-                    icon: 'success',
-                    title: "Peso idel. Parabéns. IMC = " + imc,
-                    showConfirmButton: false
-                })                  
+                        icon: 'success',
+                        title: "Peso ideal. Parabéns. IMC = " + imc,
+                        showConfirmButton: false
+                    })
                 } else if ((imc >= 25.0) && (imc <= 29.9)) {
                     //alert("Levemente acima do peso. IMC = " + imc);
                     Swal.fire("Levemente acima do peso. IMC = " + imc)
                 } else if ((imc >= 30.0) && (imc <= 34.9)) {
                     //alert("Obesidade grau I. IMC = " + imc);
-                    Swal.fire("Obesidade grau I. IMC = " + imc)                    
+                    Swal.fire("Obesidade grau I. IMC = " + imc)
                 } else if ((imc >= 35.0) && (imc <= 39.0)) {
                     //alert("Obesidade grau II (Severa). IMC = " + imc);
-                    Swal.fire("Obesidade grau II (Severa). IMC = " + imc) 
+                    Swal.fire("Obesidade grau II (Severa). IMC = " + imc)
                 } else {
                     //alert("Obesidade grau III (Mórbida). IMC = " + imc);
                     Swal.fire("Obesidade grau III (Mórbida). IMC = " + imc)
@@ -47,18 +49,39 @@
             }
         }
     </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
+        * {
+            font-family: 'Alkatra', cursive;
+            font-size: 22px;
+        }
+
+        h1 {
+            font-size: 28px !important;
+        }
+        .container {    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    Introdução ao JavaScript - Peso ideal
-
-    <br><br>
-
-    Peso:<br>
-    <input type="text" id="peso" name="peso">
-    <br><br>
-    Altura:<br>
-    <input type="text" id="altura" name="altura">
-    <br><br>
-    <input type="button" value="verificar" onclick="verificarIMC()">
+    <div class="container">
+        <h1>Introdução ao JavaScript - Peso ideal</h1>
+        
+        Peso:<br>
+        <input type="text" id="peso" name="peso">
+        <br>
+        Altura:<br>
+        <input type="text" id="altura" name="altura">
+        <br>
+        <input type="button" value="verificar" onclick="verificarIMC()">
+    </div>
 </body>
+
 </html>
