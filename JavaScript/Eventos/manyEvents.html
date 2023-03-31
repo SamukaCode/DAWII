@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Mouse Move</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
+    <script type="text/javascript">
+        function exibirValor() {
+            var valor = document.getElementById('capacitacao').value;
+            document.getElementById('valor').textContent = valor;
+        }
+
+        function contarCaracteres() {
+            var tamMax = 10;
+            var texto = document.getElementById('nome').value;
+            document.getElementById('numeroCaracteres').textContent = texto.length;
+            document.getElementById('numeroCaracteresRest').textContent = tamMax = texto.length;
+        }
+
+        function exibirCor() {
+            var cor = document.getElementById('corPreferida').value;
+
+            document.getElementById('texto').style.color = cor;
+            document.getElementById('fundo').style.backgroundColor = cor;
+        }
+
+        function somasub(op) {
+            if (op == "+") {
+                document.getElementById('resultado').textContent = parseInt(document.getElementById('resultado').textContent) + 1;
+            } else if (op == "-") {
+                document.getElementById('resultado').textContent = parseInt(document.getElementById('resultado').textContent) -1;
+            } 
+
+            if ((parseInt(document.getElementById('resultado').textContent)) <= 0) {
+                document.getElementById('sub').disabled = true;
+            } else {
+                document.getElementById('sub').disabled = false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        Capacitação: <br>
+        <input type="range" id="capacitacao" min="0" max="10" value="0" onmousemove="exibirValor()">
+        <span id="valor">0</span>
+
+    <br><br>
+    Nome: <br>
+    <input type="text" id="nome" maxlength="10" onkeyup="contarCaracteres()">
+    <span id="numeroCaracteres">0</span> caracteres /
+    <span id="numeroCaracteresRest">10</span> caracteres restantes
+
+    <br><br>
+    Cor preferida <br>
+    <input type="color" id="corPreferida" onchange="exibirCor()">
+
+    <br><br>
+    <span id="texto">Minha cor preferida</span>
+    <div id="fundo"></div>
+
+    <div id="produto">
+        <img src="https://blackskullusa.vtexassets.com/arquivos/ids/157115/985583_creatine-creatina-monohidratada-150g_z1_637145933449129837.jpg" alt="creatina" width="50px">
+        <br><br>
+        <input type="button" value="+" onclick="somasub('+')">
+        <span id="resultado">1</span>
+        <input type="button" id="sub" value="-" onclick="somasub('-')">
+    </div>
+    </form>
+</body>
+
+</html>

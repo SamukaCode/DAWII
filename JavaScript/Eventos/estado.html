@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function somasub(op) {
+            if (op == "+") {
+                document.getElementById('resultado').textContent = parseInt(document.getElementById('resultado').textContent) + 1;
+            }
+            if (op == "-") {
+                document.getElementById('resultado').textContent = parseInt(document.getElementById('resultado').textContent) - 1;
+            }
+
+            if ((parseInt(document.getElementById('resultado').textContent)) <= 0) {
+                document.getElementById('sub').disabled = true;
+            } else {
+                document.getElementById('sub').disabled = false;
+            }
+
+            if ((parseInt(document.getElementById('resultado').textContent)) < 0) {
+                document.getElementById('resultado').style.color = "red";
+            } else {
+                document.getElementById('resultado').style.color = "black";
+            }
+        }
+
+        function gerarCidades() {
+
+            var estado = document.getElementById('estado').value;
+            var cidade = document.getElementById('cidade');
+
+            var option = "";
+
+            if (estado == "") {
+                limpaCombo();
+            }
+
+            if (estado == "SP") {
+                limpaCombo();
+
+                option = document.createElement("option");
+                option.value = "1";
+                option.text = "Limeira";
+                cidade.add(option);
+
+                option = document.createElement('option');
+                option.value = "2";
+                option.text = 'Iracemapólis';
+                cidade.add(option);
+
+                option = document.createElement('option');
+                option.value = "3";
+                option.text = 'Campinas';
+                cidade.add(option);
+
+            }
+
+            if (estado == "MG") {
+                limpaCombo();
+
+                option = document.createElement("option");
+                option.value = "1";
+                option.text = "Varginha";
+                cidade.add(option);
+
+                option = document.createElement('option');
+                option.value = "2";
+                option.text = 'Poços de Caldas';
+                cidade.add(option);
+
+                option = document.createElement('option');
+                option.value = "3";
+                option.text = 'Belo Horizonte';
+                cidade.add(option);
+
+            }
+
+            if (estado == "RJ") {
+                limpaCombo();
+
+                option = document.createElement("option");
+                option.value = "1";
+                option.text = "Angra dos Reis";
+                cidade.add(option);
+
+                option = document.createElement('option');
+                option.value = "2";
+                option.text = 'Niterói';
+                cidade.add(option);
+
+                option = document.createElement('option');
+                option.value = "3";
+                option.text = 'Cabo Frio';
+                cidade.add(option);
+
+            }
+
+        }
+
+        function limpaCombo() {
+            var comboCidades = document.getElementById("cidade");
+
+            while(comboCidades.length) {
+                comboCidades.remove(0);
+            }
+        }
+    </script>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            border-style: solid;
+            border-color: black;
+        }
+
+        #produto {
+            width: 65px;
+            height: auto;
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        Estado:<br>
+        <select onchange="gerarCidades();" id="estado">
+            <option></option>
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+        </select>
+
+        <br><br>
+        Cidade:<br>
+        <select id="cidade"></select>
+    </form>
+</body>
+
+</html>
