@@ -9,7 +9,7 @@ int main()
     int it[nc][2];
     for (i = 0; i < nc; i++) {
         for(j = 0; j < 2; j++) {
-            scanf("%d", it[i,j]);
+            scanf("%d", it[i][j]);
         }
     }
     scanf("%d", &ns);
