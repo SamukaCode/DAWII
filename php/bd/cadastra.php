@@ -64,7 +64,7 @@
 <?php
 
 try {
-    if ($SERVER("REQUEST_METHOD") == "POST") {
+    if ($SERVER["REQUEST_METHOD"] == "POST") {
         $ra = $_POST["ra"];
         $nome = $_POST["nome"];
         $curso = $_POST["curso"];
