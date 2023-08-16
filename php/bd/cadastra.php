@@ -62,6 +62,7 @@
 </html>
 
 <?php
+define('TAMANHO_MAXIMO', (2 *1024 * 1024));
 
 try {
     if ($SERVER["REQUEST_METHOD"] == "POST") {
@@ -69,8 +70,21 @@ try {
         $nome = $_POST["nome"];
         $curso = $_POST["curso"];
 
+        $uploaddir = 'upload/fotos/'; // diretório onde será gravada a imagem
+
+        $foto = $_FILES['foto'];
+        $nomeFoto = $foto['name'];
+        $tipoFoto = $foto['type'];
+        $tamanhoFoto = $foto['size'];
+
+        $info = new SplFileInfo($nomeFoto);
+        $extensaoArq = $info->getExtension();
+        $novoNomeFoto = $ra . "." . $extensaoArq;
+
         if (empty(trim($ra)) || empty(trim($nome)) || empty(trim($curso))) {
             echo "<p id='warning'>Preencha todos os campos!</p>";
+        } else if ( ($nomeFoto != "") && (!preg_match('/^image\/(jpeg|png|gif)$/', $tipoFoto))) {
+
         } else {
 
             include_once("conexao.php");
@@ -82,10 +96,18 @@ try {
             $rows = $stmt->rowCount();
 
             if ($rows <= 0) {
-                $stmt = $pdo->prepare("INSERT INTO alunos (ra, nome, curso) VALUES (:ra, :nome, :curso)");
+
+                if (($nomeFoto != "") && (move_uploaded_file($_FILES['foto']['tmp_name'], $uploaddir . $novoNomeFoto))) {
+                    $uploadfile = $uploaddir . $novoNomeFoto;
+                } else {
+                    $uploadfile = null;
+                    echo "Sem upload de imagem.";
+                }
+                $stmt = $pdo->prepare("INSERT INTO alunos (ra, nome, curso, arquivoFoto) VALUES (:ra, :nome, :curso, :arquivoFoto)");
                 $stmt->bindParam(':ra', $ra);
                 $stmt->bindParam(':nome', $nome);
                 $stmt->bindParam(':curso', $curso);
+                $stmt->bindParam(':arquivoFoto', $uploadfile);
                 $stmt->execute();
 
                 echo "<p id='sucess'>Aluno cadastrado com sucesso!</p>";

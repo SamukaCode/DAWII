@@ -1,70 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
 </head>
 <body>
-    <a href="index.html"></a>
-    <hr>
-    <h2>Consulta de Alunos</h2>
-    <form method="post">
-        RA:<br>
-        <input type="text" size="10" name="ra">
-        <input type="submit" value="Consultar">
-        <hr>
-    </form>
+<a href="BD_Cindex.html"></a>
+
+	<h2>Consulta de Alunos</h2>
+	<form method="POST">
+		Ra: <br>
+		<input type="text" name="ra" size="10">
+		<input type="submit" value="Consultar">
+		<hr>		
+	</form>
 </body>
 </html>
 
-<?php 
-    if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-        
-        include("conexao.php");
+<?php
+	if ($_SERVER["REQUEST_METHOD"] == 'POST') {
+	    
+	    include("BD_Cconexao.php"); //include: faz conexao com bd		
 
-        if (isset($_POST["ra"]) && ($_POST["ra"] != "")) {
-            $ra = $_POST["ra"];
-            $stmt = $pdo->prepare("select * from alunos where ra = :ra order by curso, nome");
-            $stmt->bindParam(':ra', $ra);
-        } else {
-            $stmt = $pdo->prepare("select * from alunos order by curso, nome");
-        }
+		if (isset($_POST["ra"]) && ($_POST['ra'] != "")){
+			$ra = $_POST['ra'];
+			$stmt = $pdo -> prepare("select * from alunosPHP where ra = :ra order by nome,curso");
+			$stmt -> bindParam(':ra', $ra);	
+		} else {
+		$stmt = $pdo -> prepare("select * from alunosPHP order by nome,curso");
+	}
 
-        try {
-            $stmt->execute();
+	try {							
+		//buscando dados
+		$stmt -> execute();
 
-            echo "<form method='post'>";
-            echo "<table border='1px'>";
-            echo "<tr>";
-            echo "<th></th>";
-            echo "<th>RA</th>";
-            echo "<th>Nome</th>";
-            echo "<th>Curso</th>";
-            echo "</tr>";
+		echo "<form method='post'>";
+		echo "<table border='1px'>";
+			echo "<tr>";
+				echo "<th></th>";
+				echo "<th>RA</th>";
+				echo "<th>Nome</th>";
+				echo "<th>Curso</th>";
+				echo "<th>Foto</th>";
+			echo "</tr>";
 
-            while ($row = $stmt->fetch()) {
-                echo "<tr>";
-                echo "<td><input type='radio' name='raAluno' value='" . $row['ra'] . "'>";
-                echo "<td>" . $row['ra'] . "</td>";
-                echo "<td>" . $row['nome'] . "</td>";
-                echo "<td>" . $row['curso'] . "</td>";
-                echo "</tr>";
-            }
+			while ($row = $stmt->fetch()) {
+				echo "<tr>";
+					echo "<td><input type='radio' name='raAluno' value='" .$row['ra']. "'></td>" ;
+					echo "<td>" . $row['ra'] . "</td>";
+					echo "<td>" . $row['nome'] . "</td>";
+					echo "<td>" . $row['curso'] . "</td>";
 
-            echo "</table><br>";
+					if ($row["foto"] == null) {
+						echo"<td align='center'>-</td>";
+					} else {
+						echo "<td align='center'><img src='data:image;base64,".base64_encode($row["foto"])."'width='50px' height='50px'></td>";
+					}
 
-            echo "<button type='submit' formaction='remove.php'>Excluir Aluno</button>";
-            echo "<button type='submit' formaction='edicao.php'>Editar Aluno</button>";
-            echo "</form>";
-        } catch (PDOException $e) {
-            echo 'Error: ' . $e->getMessage();
-        }
+				echo "</tr>";
+		}
 
-        $pdo = null;
+		echo "</table><br>";
+			echo "<button type='submit' formaction='BD_Cremove.php'> Excluir Aluno</button>";
+			echo "<button type='submit' formaction='BD_Cedicao.php'> Editar Aluno</button>";
+		echo "</form>";
 
-    }
+	} catch (Exception $e) {
+		echo 'Error: ' . $e -> getMessage();
+	}
 
-
-?>
+	$pdo = null;
+}
+	
+	
