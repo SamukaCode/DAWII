@@ -16,8 +16,7 @@
 </html>
 
 <?php
-
-    include("conexaoBD.php");
+    include("conexao.php");
     define('TAMANHO_MAXIMO', (2 * 1024 * 1024));
 
     //upload dir
