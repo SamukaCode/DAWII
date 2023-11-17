@@ -1,0 +1,295 @@
+idBancada,local,apelido
+1,"Sala 2",Informática
+2,Cotil,Office
+3,"Sala 3",Recepção
+9,"Sala 1",Administração
+13,"Sala A",B1
+14,"Sala B",B2
+16,"Escritório 101",E101
+17,"Escritório 102",E102
+18,"Sala de Conferência 1",SC1
+19,"Sala de Conferência 2",SC2
+20,"Sala D",D4
+21,"Sala E",E5
+22,"Sala F",F6
+23,"Sala G",G7
+24,"Escritório 103",E103
+25,"Escritório 104",E104
+26,"Sala H",H8
+27,"Sala I",I9
+28,"Sala J",J10
+29,"Sala K",K11
+30,"Escritório 105",E105
+31,"Escritório 106",E106
+32,"Sala L",L12
+33,"Sala M",M13
+34,"Sala N",N14
+35,"Sala O",O15
+36,"Escritório 107",E107
+37,"Escritório 108",E108
+38,"Sala P",P16
+39,"Sala Q",Q17
+40,"Sala R",R18
+41,"Sala S",S19
+42,"Escritório 109",E109
+43,"Escritório 110",E110
+44,"Sala T",T20
+45,"Sala U",U21
+46,"Sala V",V22
+47,"Sala W",W23
+48,"Escritório 111",E111
+49,"Escritório 112",E112
+50,"Sala X",X24
+51,"Sala Y",Y25
+52,"Sala Z",Z26
+53,"Sala AA",AA27
+54,"Sala BB",BB28
+55,"Sala CC",CC29
+56,"Escritório 201",E201
+57,"Escritório 202",E202
+58,"Sala de Conferência 3",SC3
+59,"Sala de Conferência 4",SC4
+60,"Sala DD",DD30
+61,"Sala EE",EE31
+62,"Sala FF",FF32
+63,"Sala GG",GG33
+64,"Escritório 203",E203
+65,"Escritório 204",E204
+66,"Sala HH",HH34
+67,"Sala II",II35
+68,"Sala JJ",JJ36
+69,"Sala KK",KK37
+70,"Escritório 205",E205
+71,"Escritório 206",E206
+72,"Sala LL",LL38
+73,"Sala MM",MM39
+74,"Sala NN",NN40
+75,"Sala OO",OO41
+76,"Escritório 207",E207
+77,"Escritório 208",E208
+78,"Sala PP",PP42
+79,"Sala QQ",QQ43
+80,"Sala RR",RR44
+81,"Sala SS",SS45
+82,"Escritório 209",E209
+83,"Escritório 210",E210
+84,"Sala TT",TT46
+85,"Sala UU",UU47
+86,"Sala VV",VV48
+87,"Sala WW",WW49
+88,"Escritório 211",E211
+89,"Escritório 212",E212
+90,"Sala XX",XX50
+91,"Sala YY",YY51
+92,"Sala ZZ",ZZ52
+93,"Sala AAA",AAA53
+94,"Sala BBB",BBB54
+95,"Sala CCC",CCC55
+96,"Escritório 301",E301
+97,"Escritório 302",E302
+98,"Sala de Conferência 5",SC5
+99,"Sala de Conferência 6",SC6
+100,"Sala DDD",DDD56
+101,"Sala EEE",EEE57
+102,"Sala FFF",FFF58
+103,"Sala GGG",GGG59
+104,"Escritório 303",E303
+105,"Escritório 304",E304
+106,"Sala HHH",HHH60
+107,"Sala III",III61
+108,"Sala JJJ",JJJ62
+109,"Sala KKK",KKK63
+110,"Escritório 305",E305
+111,"Escritório 306",E306
+112,"Sala LLL",LLL64
+113,"Sala MMM",MMM65
+114,"Sala NNN",NNN66
+115,"Sala OOO",OOO67
+116,"Escritório 307",E307
+117,"Escritório 308",E308
+118,"Sala PPP",PPP68
+119,"Sala QQQ",QQQ69
+120,"Sala RRR",RRR70
+121,"Sala SSS",SSS71
+122,"Escritório 309",E309
+123,"Escritório 310",E310
+124,"Sala TTT",TTT72
+125,"Sala UUU",UUU73
+126,"Sala VVV",VVV74
+127,"Sala WWW",WWW75
+128,"Escritório 311",E311
+129,"Escritório 312",E312
+130,"Sala XXX",XXX76
+131,"Sala YYY",YYY77
+132,"Sala ZZZ",ZZZ78
+133,"Sala de Reuniões 1",Reun1
+134,"Sala de Reuniões 2",Reun2
+135,"Escritório Executivo 1",Exec1
+136,"Escritório Executivo 2",Exec2
+137,"Sala de Desenvolvimento",DevRoom
+138,"Sala de Marketing",MktRoom
+139,"Sala de Vendas",SalesRoom
+140,"Escritório Financeiro",FinOffice
+141,"Sala de TI",ITRoom
+142,"Sala de Design",DesignRoom
+143,"Sala de Engenharia",EngRoom
+144,"Sala de Atendimento ao Cliente",CustServ
+145,"Escritório de Recursos Humanos",HROffice
+146,"Sala de Entrevistas",Interview
+147,"Sala de Treinamento 1",Train1
+148,"Sala de Treinamento 2",Train2
+149,"Sala de Relaxamento",RelaxRoom
+150,"Sala de Almoço",LunchRoom
+151,"Escritório de Projetos",ProjOffice
+152,"Sala Criativa",Creative
+153,"Sala de Inovação",Innovation
+154,"Sala de Testes",TestRoom
+155,"Sala de Produção",ProdRoom
+156,"Sala de Contabilidade",AcctRoom
+157,"Escritório de Legal",LegalOffice
+158,"Sala de Auditoria",AuditRoom
+159,"Sala de Conferências 1",Conf1
+160,"Sala de Conferências 2",Conf2
+161,"Sala de Conferências 3",Conf3
+162,"Sala de Conferências 4",Conf4
+163,"Sala de Conferências 5",Conf5
+164,"Sala de Conferências 6",Conf6
+165,"Escritório de Parcerias",Partners
+166,"Sala de Clientes",ClientRoom
+167,"Sala de Produção de Conteúdo",Content
+168,"Sala de Médicos",MedRoom
+169,"Sala de Enfermagem",NurseRoom
+170,"Sala de Terapia",TherapyRoom
+171,"Sala de Pacientes 101",Patient101
+172,"Sala de Pacientes 102",Patient102
+173,"Sala de Reuniões Executivas",ExecMeet
+174,"Escritório de Desenvolvimento de Software",DevOffice
+175,"Sala de Marketing Digital",DigitalMkt
+176,"Sala de Vendas Estratégicas",StratSales
+177,"Sala de Inovação e Criatividade",Innovate
+178,"Sala de Treinamento Avançado",AdvTrain
+179,"Sala de Conferências VIP",VIPConf
+180,"Escritório Financeiro Central",FinCentral
+181,"Sala de TI e Infraestrutura",ITInfra
+182,"Sala de Design Interativo",InteractDesign
+183,"Sala de Engenharia de Produtos",ProdEng
+184,"Escritório de Atendimento ao Cliente",ClientCare
+185,"Sala de Recursos Humanos Estratégicos",StratHR
+186,"Sala de Reuniões de Parcerias",PartnersMeet
+187,"Sala de Treinamento de Liderança",LeadTrain
+188,"Sala de Treinamento Técnico",TechTrain
+189,"Sala de Criatividade Colaborativa",CollabCreat
+190,"Sala de Almoço e Networking",NetLunch
+191,"Escritório de Projetos Globais",GlobalProj
+192,"Sala de Testes de Qualidade",QA_Test
+193,"Sala de Produção de Conteúdo Audiovisual",AV_Content
+194,"Sala de Design Industrial",IndustDesign
+195,"Sala de Pesquisa e Desenvolvimento",RnD
+196,"Escritório de Contabilidade Estratégica",StratAcct
+197,"Sala de Jurídico Corporativo",CorpLegal
+198,"Sala de Conferências de Estratégia",StratConf
+199,"Sala de Conferências de Inovação",InnovConf
+200,"Sala de Conferências de Marketing",MktConf
+201,"Sala de Conferências de Vendas",SalesConf
+202,"Sala de Conferências de RH",HRConf
+203,"Sala de Conferências de Tecnologia",TechConf
+204,"Escritório de Desenvolvimento de Negócios",BizDevOffice
+205,"Sala de Clientes Premium",PremiumClients
+206,"Sala de Produção de Filmes",FilmProd
+207,"Sala de Cirurgia 1",Surgery1
+208,"Sala de Cirurgia 2",Surgery2
+209,"Sala de Consultas 1",Consult1
+210,"Sala de Consultas 2",Consult2
+211,"Sala de Psicologia",PsychRoom
+212,"Sala de Terapia Ocupacional",OTRoom
+213,"Sala de Reabilitação",RehabRoom
+214,"Sala de Fisioterapia 1",PTRoom1
+215,"Sala de Fisioterapia 2",PTRoom2
+216,"Sala de Espera 1",Waiting1
+217,"Sala de Espera 2",Waiting2
+218,"Sala de Descanso para Pacientes",PatientRest
+219,"Sala de Observação",ObservRoom
+220,"Sala de Cuidados Intensivos 1",ICU1
+221,"Sala de Cuidados Intensivos 2",ICU2
+222,"Sala de Partos",DeliveryRoom
+223,"Sala de Neonatologia",NeoRoom
+224,"Sala de Recuperação Pós-Operatória",PostOpRecov
+521,"Sala de Estratégia de Mercado",MarketStrat
+522,"Sala de Desenvolvimento de Apps",AppDev
+523,"Sala de Marketing de Mídia Social",SocialMediaMkt
+524,"Sala de Vendas Corporativas",CorpSales
+525,"Sala de Criação de Protótipos",PrototypeLab
+526,"Sala de Treinamento de Novos Gerentes",NewMgrTrain
+527,"Sala de Conferências Internacional",IntlConf
+528,"Escritório de Finanças Estratégicas",StratFin
+529,"Sala de TI de Alto Desempenho",HighPerfIT
+530,"Sala de Design de Interface",InterfaceDesign
+531,"Sala de Engenharia de Software",SoftwareEng
+532,"Escritório de Suporte ao Cliente",SupportOffice
+533,"Sala de Recursos Humanos Multicultural",MulticulturalHR
+534,"Sala de Avaliação de Candidatos",CandidateEval
+535,"Sala de Treinamento de Liderança Executiva",ExecLeadTrain
+536,"Sala de Treinamento em Segurança Cibernética",CyberSecTrain
+537,"Sala de Brainstorming Criativo",Brainstorm
+538,"Sala de Almoço e Networking Corporativo",CorpNetLunch
+539,"Escritório de Projetos Inovadores",InnovProj
+540,"Sala de Testes de Usabilidade",UsabilityTest
+541,"Sala de Produção de Conteúdo Web",WebContent
+542,"Sala de Design de Moda",FashionDesign
+543,"Sala de Pesquisa Avançada",AdvResearch
+544,"Escritório de Auditoria Interna",InternalAudit
+545,"Sala de Assuntos Legais Internacionais",IntlLegal
+546,"Sala de Conferências Estratégicas Globais",GlobalStratConf
+547,"Sala de Conferências de Inovação Corporativa",CorpInnovConf
+548,"Sala de Conferências de Marketing Digital",DigitalMktConf
+549,"Sala de Conferências de Vendas Internacionais",IntlSalesConf
+550,"Sala de Conferências de Recursos Humanos",HRConf
+551,"Sala de Conferências de Tecnologia Avançada",AdvTechConf
+552,"Escritório de Expansão de Negócios",BizExpansion
+553,"Sala de Clientes VIP Internacionais",IntlVIPClients
+554,"Sala de Produção de Filmes Corporativos",CorpFilmProd
+555,"Sala de Cirurgia Cardíaca",CardiacSurgery
+556,"Sala de Cirurgia Ortopédica",OrthoSurgery
+557,"Sala de Consultas de Especialistas",SpecialistConsult
+558,"Sala de Consultas Pediátricas",PediatricConsult
+559,"Sala de Psicoterapia",PsychoTherapy
+560,"Sala de Terapia Ocupacional Infantil",PediatricOT
+561,"Sala de Estratégia de Produto",ProductStrat
+562,"Sala de Desenvolvimento de Aplicações Web",WebAppDev
+563,"Sala de Marketing de Conteúdo Visual",VisualContentMkt
+564,"Sala de Vendas Regionais",RegionalSales
+565,"Sala de Prototipagem Rápida",RapidProto
+566,"Sala de Treinamento para Novos Funcionários",NewEmployeeTrain
+567,"Sala de Conferências Multinacional",MultinationalConf
+568,"Escritório de Finanças Estratégicas",StrategicFinance
+569,"Sala de TI Avançada",AdvancedIT
+570,"Sala de Design de Interfaces",InterfaceDesign
+571,"Sala de Engenharia de Software",SoftwareEngineering
+572,"Escritório de Suporte ao Cliente",CustomerSupportOffice
+573,"Sala de Recursos Humanos Multicultural",MulticulturalHR
+574,"Sala de Avaliação de Candidatos",CandidateAssessment
+575,"Sala de Treinamento de Liderança Executiva",ExecutiveLeadershipTraining
+576,"Sala de Treinamento em Segurança Cibernética",CybersecurityTraining
+577,"Sala de Brainstorming Criativo",CreativeBrainstorming
+578,"Sala de Almoço e Networking Corporativo",CorporateNetworkingLounge
+579,"Escritório de Projetos Inovadores",InnovativeProjectsOffice
+580,"Sala de Testes de Usabilidade",UsabilityTesting
+581,"Sala de Produção de Conteúdo Web",WebContentProduction
+582,"Sala de Design de Moda",FashionDesignStudio
+583,"Sala de Pesquisa Avançada",AdvancedResearchLab
+584,"Escritório de Auditoria Interna",InternalAuditOffice
+585,"Sala de Assuntos Legais Internacionais",InternationalLegalAffairs
+586,"Sala de Conferências Estratégicas Globais",GlobalStrategicSummit
+587,"Sala de Conferências de Inovação Corporativa",CorporateInnovationConference
+588,"Sala de Conferências de Marketing Digital",DigitalMarketingSummit
+589,"Sala de Conferências de Vendas Internacionais",InternationalSalesForum
+590,"Sala de Conferências de Recursos Humanos",HRConference
+591,"Sala de Conferências de Tecnologia Avançada",AdvancedTechSymposium
+592,"Escritório de Expansão de Negócios",BusinessExpansionHub
+593,"Sala de Clientes VIP Internacionais",GlobalVIPClientSuite
+594,"Sala de Produção de Filmes Corporativos",CorporateFilmProduction
+595,"Sala de Cirurgia Cardíaca",CardiacSurgerySuite
+596,"Sala de Cirurgia Ortopédica",OrthopedicOperatingRoom
+597,"Sala de Consultas de Especialistas",SpecialistConsultationRoom
+598,"Sala de Consultas Pediátricas",PediatricConsultationRoom
+634,FT,Casa
